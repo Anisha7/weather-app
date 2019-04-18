@@ -5,6 +5,7 @@ const DisplayWeather = (props) => {
   return (
     <View style={styles.container}>
       <Text style={styles.temp}>72˚</Text>
+      <Text>Partly Cloudy</Text>
     </View>
   )
 }
