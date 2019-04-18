@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import DisplayWeather from './Components/DisplayWeather'
+import { REACT_APP_WEATHER_API_KEY } from 'react-native-dotenv'
 
 // ERROR: Can't find variable: WEATHER_API_KEY
 
@@ -25,7 +26,7 @@ export default class App extends React.Component {
   }
   
   loadWeather() {
-    const apikey = WEATHER_API_KEY
+    const apikey = REACT_APP_WEATHER_API_KEY
     const { latitude, longitude } = this.state.location.coords
     const units = 'Imperial'
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apikey}&units=${units}`
