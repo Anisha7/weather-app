@@ -2,6 +2,8 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import DisplayWeather from './Components/DisplayWeather'
 
+// ERROR: Can't find variable: WEATHER_API_KEY
+
 export default class App extends React.Component {
   constructor(props) {
     super(props)
@@ -39,7 +41,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <DisplayWeather />
+        <DisplayWeather data={this.state.weather} />
       </View>
     );
   }
